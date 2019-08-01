@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="controller.form.CarroForm"/>
+<fullyQualifiedTypeName name="model.bean.CarroBean"/>
+<fullyQualifiedTypeName name="model.business.CarroBusiness"/>
+<fullyQualifiedTypeName name="util.conexao.FabricaDeConexao"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="model.dao.CarroDao"/>
+</qualifiedTypeNameHistroy>

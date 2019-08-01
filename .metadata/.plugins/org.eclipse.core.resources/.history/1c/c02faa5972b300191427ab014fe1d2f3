@@ -1,0 +1,9 @@
+package controller.action;
+
+public class NavegacaoAction extends MainAction{
+
+	public String testeUm () {
+		
+		return "success";
+	}
+}

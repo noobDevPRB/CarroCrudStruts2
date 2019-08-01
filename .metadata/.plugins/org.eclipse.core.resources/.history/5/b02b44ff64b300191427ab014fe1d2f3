@@ -1,0 +1,8 @@
+package controller.action;
+
+public class ConsultarCarroAction extends MainAction{
+
+	public String testarPaginaUm () {
+		return "success";
+	}
+}

@@ -1,0 +1,19 @@
+package model.business;
+
+import model.bean.CarroBean;
+import model.dao.CarroDao;
+
+	
+
+public class CarroBusiness {
+	
+	CarroDao carroDao = new CarroDao();
+	
+	public void cadastrarCarro(CarroBean carroBean) {
+		
+		CarroDao carroDao = new CarroDao();
+		
+		carroDao.cadastrarCarro(carroBean);
+	}
+
+}

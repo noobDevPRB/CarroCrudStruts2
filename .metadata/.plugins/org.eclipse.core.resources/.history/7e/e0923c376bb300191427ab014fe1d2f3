@@ -1,0 +1,11 @@
+package controller.form;
+
+public class CarroForm {
+
+	private String marca;
+	private String modelo;
+	private int nPortas;
+	private String Ano;
+	private String tipo;
+	private Double valor;
+}

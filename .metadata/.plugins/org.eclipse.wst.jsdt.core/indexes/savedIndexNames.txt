@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\xxxx\Desktop\Loja_Carro\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1657677864.index
+174674940.index
+4000171186.index
+446247698.index
+2800796934.index
+2279833412.index

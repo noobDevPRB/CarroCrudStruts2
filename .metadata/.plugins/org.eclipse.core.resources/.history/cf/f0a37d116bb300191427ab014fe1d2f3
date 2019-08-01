@@ -1,0 +1,19 @@
+package model.bean;
+
+public class CarroBean {
+	
+	// marca
+		// modelo
+		// modeloDesc
+		// nPortas
+		// ano
+		// tipo
+		// Valor
+	private String marca;
+	private String modelo;
+	private int nPortas;
+	private String Ano;
+	private String tipo;
+	private Double valor;
+
+}

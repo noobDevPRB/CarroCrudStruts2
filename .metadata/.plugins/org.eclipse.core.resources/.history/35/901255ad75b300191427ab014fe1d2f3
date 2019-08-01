@@ -1,0 +1,12 @@
+package model.business;
+
+import model.bean.CarroBean;
+
+public class CarroBusiness {
+	
+	public void cadastrarCarro(CarroBean carroBean) {
+		
+		carroDao.cadastrarCarro(carroBean);
+	}
+
+}
