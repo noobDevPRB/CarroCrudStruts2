@@ -1,0 +1,11 @@
+function alertaRemoverCarro() {
+
+	var x;
+	var r = confirm("DESEJA REALMENTE EXCLUIR ESTE CARRO?");
+	if (r == true) {
+		x = href="removerCarro?carroForm.idForm=${carroForm.idForm}";
+	} else {
+		x = "volta";
+	}
+	
+}

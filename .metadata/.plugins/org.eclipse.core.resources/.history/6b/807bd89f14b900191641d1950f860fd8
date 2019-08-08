@@ -1,0 +1,3 @@
+function externalFunction(){
+    document.getElementById("externalTest").innerHTML="VAI FILHÂO"
+}

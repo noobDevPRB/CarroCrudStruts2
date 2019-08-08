@@ -1,0 +1,11 @@
+function alertaRemoverCarro() {
+
+	var x;
+	var r = confirm("DESEJA REALMENTE EXCLUIR ESTE CARRO?");
+	if (r == true) {
+		x = """;
+	} else {
+		x = "volta";
+	}
+	
+}

@@ -1,0 +1,127 @@
+package controller.action;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import controller.form.CarroForm;
+import model.bean.CarroBean;
+import model.business.CarroBusiness;
+
+public class CarroAction extends MainAction {
+
+	List<CarroForm> listaDeCarrosForm = new ArrayList<CarroForm>();
+	CarroBean carroBean = new CarroBean();
+	CarroForm carroForm = new CarroForm();
+
+	CarroBusiness carroBusiness = new CarroBusiness();
+
+	public String cadastrarCarro() {
+
+		carroBean.setMarca(carroForm.getMarcaForm());
+		carroBean.setModelo(carroForm.getModeloForm());
+		carroBean.setDescModelo(carroForm.getDescModeloForm());
+		carroBean.setnPortas(carroForm.getnPortasForm());
+		carroBean.setAno(carroForm.getAnoForm());
+		carroBean.setTipo(carroForm.getTipoForm());
+		carroBean.setValor(carroForm.getValorForm());
+
+		carroBusiness.cadastrarCarro(carroBean);
+
+		return "success";
+	}
+
+	public String listarCarros() {
+
+		for (CarroBean carroBean : carroBusiness.listarCarros()) {
+
+			CarroForm carroForm = new CarroForm();
+
+			carroForm.setIdForm(carroBean.getId());
+			carroForm.setMarcaForm(carroBean.getMarca());
+			carroForm.setModeloForm(carroBean.getModelo());
+			carroForm.setValorForm(carroBean.getValor());
+
+			listaDeCarrosForm.add(carroForm);
+
+		}
+
+		return "success";
+	}
+
+	public String detalharCarro() {
+		
+		carroBean = carroBusiness.detalharCarro(Integer.parseInt(carroForm.getIdForm()));
+
+		carroForm.setIdForm(carroBean.getId());
+		carroForm.setMarcaForm(carroBean.getMarca());
+		carroForm.setModeloForm(carroBean.getModelo());
+		carroForm.setDescModeloForm(carroBean.getDescModelo());
+		carroForm.setTipoForm(carroBean.getTipo());
+		carroForm.setAnoForm(carroBean.getAno());
+		carroForm.setnPortasForm(carroBean.getnPortas());
+		carroForm.setValorForm(carroBean.getValor());
+
+		return "success";
+	}
+
+	// Getter & Setters
+
+	public CarroBusiness getCarroBusiness() {
+		return carroBusiness;
+	}
+
+	public void setCarroBusiness(CarroBusiness carroBusiness) {
+		this.carroBusiness = carroBusiness;
+	}
+
+	public String atualizarCarro() {
+
+		carroBean.setId(carroForm.getIdForm());
+		carroBean.setMarca(carroForm.getMarcaForm());
+		carroBean.setModelo(carroForm.getModeloForm());
+		carroBean.setDescModelo(carroForm.getDescModeloForm());
+		carroBean.setnPortas(carroForm.getnPortasForm());
+		carroBean.setAno(carroForm.getAnoForm());
+		carroBean.setTipo(carroForm.getTipoForm());
+		carroBean.setValor(carroForm.getValorForm());
+
+		carroBusiness.atualizarCarro(carroBean);
+		
+		return "success";
+	}
+
+	public String removerCarro() {
+
+		carroBusiness.removerCarro(carroForm.getIdForm());
+
+		return "success";
+	}
+	
+	//Navegação
+	public String cadastroDeCarros () {		
+		return "success";
+	}
+	
+	public String consultarCarros () {		
+		return "success";
+	}
+	
+	// Setters & Getters
+
+	public CarroForm getCarroForm() {
+		return carroForm;
+	}
+
+	public void setCarroForm(CarroForm carroForm) {
+		this.carroForm = carroForm;
+	}
+
+	public List<CarroForm> getListaDeCarrosForm() {
+		return listaDeCarrosForm;
+	}
+
+	public void setListaDeCarrosForm(List<CarroForm> listaDeCarrosForm) {
+		this.listaDeCarrosForm = listaDeCarrosForm;
+	}
+
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<html>
+<head>
+	<style type="text/css">
+	.modal{
+   		border-radius: 1em;
+		border: 1px solid rgb(50, 1, 228);
+		box-shadow: black 0.5em 0.5em 0.3em;
+		position: fixed; 
+		top: 35%;
+		left: 30%;
+		color: #000;
+		padding: 10px;
+		background: #fefefe;
+		opacity: 0;
+		width: 30%;
+	}
+	.modal:target{
+		opacity: 1;
+		pointer-events: auto;
+	}
+	.boataoFechar{
+		float:right;
+		border-radius: 20px;
+		color: #FFF;
+		padding: 10px 20px;
+		letter-spacing: 2px;
+		background: #333;
+		font-weight: 600;
+		border: 3px solid #FFF;
+		cursor: pointer;
+		text-transform: uppercase;
+		font-size: 12px;
+		text-align: center;
+		  
+	}
+	.button-one:hover
+		{
+		color: #ffffff;
+		border: 3px solid #FFF;
+		background: #808080;
+	}	
+    </style>
+	<meta charset="utf-8">
+	<title>Consulta das Ofertas de Carros</title>
+	
+	<script type="text/javascript">
+		function abrirConfirmarDeletar(idCarro){
+			var confirmacao = confirm("Deseja realmente deletar o registro ID: "+ idCarro);
+			if(confirmacao){
+				window.location.href = "removerCarro?carroForm.idForm=" + idCarro;
+			}
+		}
+		
+		function abrirModalDeletar(idCarro){
+			window.location.href = "#abrir";
+			document.getElementById("idCarroModal").value = idCarro;
+		}
+		
+		function deletarCarro(){
+			var idCarro = document.getElementById("idCarroModal").value;
+			window.location.href = "removerCarro?carroForm.idForm=" + idCarro;
+		}
+	
+	</script>
+
+</head>
+<body>
+	<div>
+		<table border="1">
+			<tr>
+				<th colspan="7"  >lista dos Carros</th>
+			<tr>
+		
+			<c:forEach items="${listaDeCarrosForm}" var="carroForm">
+				<tr>
+					<td><a	href="detalharCarro?carroForm.idForm=${carroForm.idForm}">Detalhes</a></td>
+					
+					<td><c:out value="${carroForm.idForm}" /></td>
+					<td><c:out value="${carroForm.marcaForm}" /></td>
+					<td><c:out value="${carroForm.modeloForm}" /></td>
+					<td><c:out value="${carroForm.valorForm}" /></td>	
+			
+					<td><a	href='javascript:abrirModalDeletar("${carroForm.idForm}")'>Remover Modal</a></td>
+					<td><a	href="atualizarCarroPagina?carroForm.idForm=${carroForm.idForm}">Alterar</a></td>						
+				</tr>
+			</c:forEach>
+		</table>
+		<a href="http://localhost:8080/loja_carro/index.jsp">Página Inicial</a><br>
+	</div>
+	
+	<a href="#abrir">modal teste</a>
+	
+	<div id="abrir" class="modal">
+		<div>
+			<p>Deseja remover o item?</p>
+		</div>
+		<div>
+			<input type="hidden" id="idCarroModal" />  
+			
+			<a href="javascript:deletarCarro()" class="boataoFechar">SIM</a>
+    		<a href="#fechar"class="boataoFechar">NÂO</a>
+			  
+		</div>
+	</div>
+	
+</body>
+</html>

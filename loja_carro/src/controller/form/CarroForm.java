@@ -9,7 +9,7 @@ public class CarroForm {
 	private int nPortasForm;
 	private String AnoForm;
 	private String tipoForm;
-	private double valorForm;
+	private String valorForm;
 	private int idForm;
 	
 	public String getMarcaForm() {
@@ -48,10 +48,10 @@ public class CarroForm {
 	public void setTipoForm(String tipoForm) {
 		this.tipoForm = tipoForm;
 	}
-	public double getValorForm() {
+	public String getValorForm() {
 		return valorForm;
 	}
-	public void setValorForm(double valorForm) {
+	public void setValorForm(String valorForm) {
 		this.valorForm = valorForm;
 	}
 	public int getIdForm() {

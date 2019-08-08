@@ -1,0 +1,10 @@
+function alertaRemoverCarro() {
+
+	var escolha = confirmar("Deseja Remover este item ?");
+    if( escolha == true ) {   
+       return true;
+    } else {
+       document.write ("nao deletou");
+       return false;
+    }
+ }

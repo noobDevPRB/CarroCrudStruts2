@@ -1,0 +1,11 @@
+function alertaRemoverCarro() {
+
+	var x;
+	var r = confirm("DESEJA REALMENTE EXCLUIR ESTE CARRO?");
+	if (r == true) {
+		x = "você pressionou OK!";
+	} else {
+		x = "Você pressionou Cancelar!";
+	}
+	document.getElementById("demo").innerHTML = x;
+}

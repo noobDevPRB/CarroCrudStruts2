@@ -10,59 +10,45 @@
 	
 		<action name="cadastrarCarro" class="controller.action.CarroAction"
 			method="cadastrarCarro">
-			<result name="success">/WEB-INF/jsp/cadastroDeCarros.jsp</result>
-			<result name="failure">/WEB-INF/jsp/</result>
+			<result name="success">/WEB-INF/jsp/dadosDoCarro.jsp</result>
+			<result name="failure">/WEB-INF/jsp/erro.jsp</result>
 		</action>
 		
-		<action name="listarCarros" class="controller.action.CarroAction"
-			method="listarCarros">
-			<result name="success">/WEB-INF/jsp/consultarCarros.jsp</result>
-			<result name="failure">/WEB-INF/jsp/</result>
-		</action>
-		
-			<action name="detalharCarro" class="controller.action.CarroAction"
+		<action name="detalharCarro" class="controller.action.CarroAction"
 			method="detalharCarro">
 			<result name="success">/WEB-INF/jsp/dadosDoCarro.jsp</result>
-			<result name="failure">/WEB-INF/jsp/</result>
+			<result name="failure">/WEB-INF/jsp/erro.jsp</result>
 		</action>
 		
 		<action name="atualizarCarroPagina" class="controller.action.CarroAction"
 			method="detalharCarro">
 			<result name="success">/WEB-INF/jsp/atualizarDadosDoCarro.jsp</result>
-			<result name="failure">/WEB-INF/jsp/</result>
+			<result name="failure">/WEB-INF/jsp/erro.jsp</result>
 		</action>
 		
 		<action name="atualizarCarro" class="controller.action.CarroAction"
 			method="atualizarCarro">
 			<result name="success">/WEB-INF/jsp/atualizarDadosDoCarro.jsp</result>
-			<result name="failure">/WEB-INF/jsp/</result>
+			<result name="failure">/WEB-INF/jsp/erro.jsp</result>
 		</action>
 		
 		<action name="removerCarro" class="controller.action.CarroAction"
 			method="removerCarro">
-			<result name="success">/WEB-INF/jsp/consultarCarros.jsp</result>
-			<result name="failure">/WEB-INF/jsp/index.jsp</result>
-		</action>
-		
-		<action name="listarCarros" class="controller.action.CarroAction"
-			method="listarCarros">
-			<result name="success">/WEB-INF/jsp/consultarCarros.jsp</result>
-			<result name="failure">/WEB-INF/jsp/</result>
+			<result name="success" type="chain">consultarCarros</result>
+			<result name="failure">/WEB-INF/jsp/erro.jsp</result>
 		</action>
 		
 		
-		
-		
-		<action name="cadastroDeCarros" class="controller.action.NavegacaoAction"
+		<action name="cadastroDeCarros" class="controller.action.CarroAction"
 			method="cadastroDeCarros">
 			<result name="success">/WEB-INF/jsp/cadastroDeCarros.jsp</result>
-			<result name="failure">/WEB-INF/jsp/</result>
+			<result name="failure">/WEB-INF/jsp/erro.jsp</result>
 		</action>
 		
-		<action name="consultarCarros" class="controller.action.NavegacaoAction"
-			method="consultarCarros">
+		<action name="consultarCarros" class="controller.action.CarroAction"
+			method="listarCarros">
 			<result name="success">/WEB-INF/jsp/consultarCarros.jsp</result>
-			<result name="failure">/WEB-INF/jsp/</result>
+			<result name="failure">/WEB-INF/jsp/erro.jsp</result>
 		</action>	
 		
 	</package>

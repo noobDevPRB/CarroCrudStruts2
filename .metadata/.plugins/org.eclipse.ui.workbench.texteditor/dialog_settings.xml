@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="409" key="DIALOG_X_ORIGIN"/>
+		<item value="224" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
+		<item value="cadastrarCarro" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="cadastrarCarro"/>
+			<item value="&lt;br&gt;"/>
+			<item value="carroForm.idForm"/>
+			<item value="atualizarCarro"/>
+			<item value="atualizarcarropagina"/>
+			<item value="carroBean"/>
+			<item value="cadastroDeCarros"/>
 		</list>
 		<list key="replacehistory">
 		</list>

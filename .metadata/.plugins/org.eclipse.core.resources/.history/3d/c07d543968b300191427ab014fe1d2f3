@@ -1,8 +1,0 @@
-package controller.action;
-
-public class ConsultarCarroAction extends MainAction{
-
-	public String paginaBuscarOfertas () {
-		return "success";
-	}
-}

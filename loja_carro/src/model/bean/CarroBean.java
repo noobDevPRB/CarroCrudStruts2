@@ -9,10 +9,10 @@ public class CarroBean {
 	private int nPortas;
 	private String Ano;
 	private String tipo;
-	private double valor;
+	private String valor;
 	
 	public CarroBean(int id, String marca, String modelo, String descModelo, int nPortas, String ano, String tipo,
-			double valor) {
+			String valor) {
 		
 		this.id = id;
 		this.marca = marca;
@@ -116,13 +116,13 @@ public class CarroBean {
 
 
 
-	public double getValor() {
+	public String getValor() {
 		return valor;
 	}
 
 
 
-	public void setValor(double valor) {
+	public void setValor(String valor) {
 		this.valor = valor;
 	}
 

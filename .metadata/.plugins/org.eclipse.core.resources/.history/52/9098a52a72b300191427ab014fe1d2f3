@@ -1,9 +1,0 @@
-package controller.action;
-
-public class NavegaçãoAction extends MainAction{
-
-	public String testeUm () {
-		
-		return "success";
-	}
-}

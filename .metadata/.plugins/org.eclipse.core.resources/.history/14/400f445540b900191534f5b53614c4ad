@@ -1,0 +1,8 @@
+function confirmarDeleteCarro() {
+
+	var x = confirm("Deseja deletar este carro?");
+	if (x)
+		return true;
+	else
+		return false;
+}

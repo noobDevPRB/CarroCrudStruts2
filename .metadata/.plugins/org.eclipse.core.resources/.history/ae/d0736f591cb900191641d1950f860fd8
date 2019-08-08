@@ -1,0 +1,4 @@
+
+function alertaRemoverCarro(){
+	alert('DESEJA REALMENTE EXCLUIR ESTE CARRO?'); 
+}

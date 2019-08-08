@@ -1,8 +1,0 @@
-package controller.action;
-
-public class TesteUmAction {
-
-	public String TestarPaginaUM () {
-		return "success";
-	}
-}

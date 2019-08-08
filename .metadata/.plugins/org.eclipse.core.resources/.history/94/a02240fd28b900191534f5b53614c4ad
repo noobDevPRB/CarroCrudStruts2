@@ -1,0 +1,17 @@
+function alertaRemoverCarro() {
+
+	var cancelar;
+	var ok = confirm("DESEJA REALMENTE EXCLUIR ESTE CARRO?");
+	if (ok == true) {
+	} else {
+		document.action = href="http://localhost:8080/loja_carro/consultarCarros";
+	}	
+}
+function alertaRemoverCarro() {
+var txt;
+var r = confirm("Press a button!");
+if (r == true) {
+  txt = "You pressed OK!";
+} else {
+  txt = "You pressed Cancel!";
+}

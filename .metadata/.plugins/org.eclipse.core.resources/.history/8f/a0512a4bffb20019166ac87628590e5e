@@ -1,8 +1,0 @@
-package controller.action;
-
-public class TesteUmAction extends MainAction{
-
-	public String TestarPaginaUm () {
-		return "success";
-	}
-}

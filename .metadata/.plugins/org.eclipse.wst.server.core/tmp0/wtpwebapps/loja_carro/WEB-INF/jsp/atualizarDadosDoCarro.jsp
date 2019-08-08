@@ -10,46 +10,48 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<table border="1">
-		<tr>
-			<th>Detalhes do Carro</th>
-		<tr>
-		<tr>
-			<td>ID<br>
-			MARCA<br>
-			MODELO<br>
-			DESCRIÇÃO<br>
-			ANO<br>
-			PORTAS<br>
-			TIPO<br>
-			PREÇO</td>
-
-			<td>
-				<s:property value="carroForm.idForm" /><br> 
-				<s:property	value="carroForm.marcaForm" /><br>
-				<s:property value="carroForm.modeloForm" /><br> 
-				<s:property value="carroForm.descModeloForm" /><br> 
-				<s:property value="carroForm.anoForm" /><br>
-				<s:property value="carroForm.nPortasForm" /><br> 
-				<s:property value="carroForm.tipoForm" /><br> 
-				<s:property	value="carroForm.valorForm" />
-			</td>
-
-		</tr>
-
-	</table><br>
 	
-	<form action="atualizarCarro?carroForm.idForm=${carroForm.idForm}" method="post">
-
-		<input type="text" placeholder="marca" name="carroForm.marcaForm"><br>
-		<input type="text" placeholder="modelo" name="carroForm.modeloForm"><br>
-		<input type="text" placeholder="descrição do modelo"name="carroForm.descModeloForm"><br> 
-		<input type="text" placeholder="portas" name="carroForm.nPortasForm"><br> 
-		<input type="text" placeholder="ano" name="carroForm.AnoForm"><br>
-		<input type="text" placeholder="tipo" name="carroForm.tipoForm"><br>
-		<input type="number" placeholder="valor" name="carroForm.valorForm"><br>
-
+	<form action="atualizarCarro" method="post">
+		<table border="1">
+			<tr>
+				<th colspan="2">Detalhes do Carro</th>
+			</tr>
+			<tr>
+				<td>ID</td>
+				<td>${carroForm.idForm} 
+				<input value="${carroForm.idForm}"type="hidden" name="carroForm.idForm"></td>		
+			</tr>
+			<tr>
+				<td>MARCA</td>
+				<td><input value="${carroForm.marcaForm}" type="text" name="carroForm.marcaForm"></td>
+			</tr>
+			<tr>
+				<td>MODELO</td>
+				<td><input value="${carroForm.modeloForm}" type="text" name="carroForm.modeloForm"></td>
+			</tr>
+			<tr>
+				<td>DESCRIÇÃO</td>
+				<td><input value="${carroForm.descModeloForm}" type="text" name="carroForm.descModeloForm"><br></td>
+			</tr>
+			<tr>
+				<td>ANO</td>
+				<td><input value="${carroForm.anoForm}" type="text" name="carroForm.anoForm"></td>
+			</tr>
+			<tr>
+				<td>PORTAS</td>
+				<td><input value="${carroForm.nPortasForm}" type="text" name="carroForm.nPortasForm"></td>
+			</tr>
+			<tr>
+				<td>TIPO</td>
+				<td><input value="${carroForm.tipoForm}" type="text" name="carroForm.tipoForm"></td>		
+			</tr>
+			<tr>
+				<td>PREÇO</td>
+				<td><input value="${carroForm.valorForm}" type="text" name="carroForm.valorForm"></td>			
+			</tr>
+		</table>
 		<input type="submit" value="ATUALIZAR">
-	</form>
+	</form>	
+	<a href="http://localhost:8080/loja_carro/index.jsp">Página Inicial</a><br>
 </body>
 </html>
